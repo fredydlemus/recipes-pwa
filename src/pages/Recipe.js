@@ -1,7 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import mealdbApi from '../mealdb-api';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import RecipeIngredients from '../components/RecipeIngredients';
+import RecipeInstructions from '../components/RecipeInstructions';
 
 const Recipe = () => {
 
@@ -43,8 +45,8 @@ const Recipe = () => {
                                     <p>{recipe.title}</p>
                                 </div>
                             </div>
-                            <div>Ingredients</div>
-                            <div>Instructions</div>
+                            <RecipeIngredients ingredients={recipe.extendedIngredients} />
+                            <RecipeInstructions instructions={recipe.analyzedInstructions[0]} />
                         </div>
                     )
                 )}

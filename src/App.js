@@ -2,6 +2,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Recipe from './pages/Recipe';
+import Timer from './pages/Timer';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/recipe/:recipeId' element={<Recipe />} />
-            <Route exact path='/timer' element={<div>Timer</div>} />
+            <Route exact path='/timer' element={<Timer />} />
           </Routes>
 
         </main>

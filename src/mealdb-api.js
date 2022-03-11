@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 
 const baseUrl = 'https://api.spoonacular.com/recipes/';
-const API_KEY = '8c768f590f2644e2bc24e6352b6588b6';
+const API_KEY = '65f0ab8a35e24e238e3c562a25dd443d';
 
 const getAll = async () => {
     try {

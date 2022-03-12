@@ -1,6 +1,6 @@
 # Recipies
 
-![Application Capture](.readme-static/WhatsApp Image 2022-03-12 at 12.48.05 AM.jpeg)
+[Application Capture](.readme-static/WhatsApp Image 2022-03-12 at 12.48.05 AM.jpeg)
 
 "Recipies" is a PWA that utilize the spoonacular recipes API to show some recipies with their respective ingredients and instructions, some features are:
 

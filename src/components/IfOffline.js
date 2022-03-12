@@ -5,13 +5,11 @@ export const IfOffline = ({children}) => {
     console.log(navigator);
     const [onLine, setOnLine] = React.useState(navigator ? navigator.onLine : true);
 
-    const goOnline = () =>{
-        setOnLine(true);
-    }
+    const goOnline = () => setOnLine(true);
+    
 
-    const goOffline = () =>{
-        setOnLine(false);
-    }
+    const goOffline = () => setOnLine(false);
+    
 
     React.useEffect(() =>{
         if(!window) return;

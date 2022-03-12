@@ -24,6 +24,15 @@ workbox.routing.registerRoute(/^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)
         ]
     }
 ), 'GET');
+//registerRoute with workbox for cache image
+workbox.routing.registerRoute(/\.(?:png|gif|jpg|jpeg|svg)$/, new workbox.strategies.CacheFirst({
+    cacheName: 'images',
+    plugins: [
+        new workbox.expiration.ExpirationPlugin({
+            maxAgeSeconds: 7 * 24 * 60 * 60,
+        })
+    ]
+}), 'GET');
 
 //default cache strategy
 workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst(), 'GET');

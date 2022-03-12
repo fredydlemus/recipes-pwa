@@ -14,6 +14,7 @@ export const IfOffline = ({children}) => {
     }
 
     React.useEffect(() =>{
+        if(!window) return;
         window.addEventListener('online', goOnline);
         window.addEventListener('offline', goOffline);
         return () => {

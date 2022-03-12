@@ -13,6 +13,21 @@ const Recipe = () => {
     const [recipe, setRecipe] = React.useState(null);
     const [isLoading, setIsLoading] = React.useState(true);
 
+    const share = (e) =>{
+        e.preventDefault();
+        if(!navigator.share) {
+            alert('Your browser does not support the share API'); 
+            return;
+        }
+
+        const {title} = recipe;
+        navigator.share({
+            title,
+            text: 'Check out this recipe',
+            url: window.location.href
+        }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+    }
+
     React.useEffect(() => {
         mealdbApi.getRecipe(recipeId)
             .then(data => {
@@ -43,6 +58,9 @@ const Recipe = () => {
                                 <div className='info'>
                                     <h1>{recipe.title}</h1>
                                     <p>{recipe.title}</p>
+                                </div>
+                                <div>
+                                    <a onClick={share}>Share</a>
                                 </div>
                             </div>
                             <RecipeIngredients ingredients={recipe.extendedIngredients} />

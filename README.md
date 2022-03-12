@@ -9,6 +9,8 @@
 * Add to Home Screen posibility.
 * Web Share API.
 
+[Show App in production](https://build-two-pi.vercel.app/)
+
 ## Scripts
 
 * `npm install` to install dependencies

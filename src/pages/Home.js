@@ -24,6 +24,8 @@ const Home = () => {
     }
         , []);
 
+
+    console.log(recipes);
     return (
         <>
             {isLoading ? <div className='message'>Loading... </div>

@@ -43,6 +43,8 @@ const Recipe = () => {
     }
         , []);
 
+
+    console.log(recipe);
     return (
         <>
             {isLoading ? <div className='message'>Loading...</div>

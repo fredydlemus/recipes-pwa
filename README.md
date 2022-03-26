@@ -15,6 +15,11 @@
 
 Learn how increment a user experience through building a PWA that you can add to Home Screen and implement a service worker with network strategies through workbox for offline support.
 
+## Others tools
+
+* Craco for customize CRA configuration without using 'eject'.
+* Workbox for generate a service worker and their features.
+
 ## Scripts
 
 * `npm install` to install dependencies

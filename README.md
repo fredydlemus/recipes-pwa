@@ -11,6 +11,10 @@
 
 [Show App in production](https://build-two-pi.vercel.app/)
 
+## Objective of the project
+
+Learn how increment a user experience through building a PWA that you can add to Home Screen and implement a service worker with network strategies through workbox for offline support.
+
 ## Scripts
 
 * `npm install` to install dependencies
